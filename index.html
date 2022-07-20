@@ -77,17 +77,19 @@
       </div>
     </nav>
     <!-- A Navbar -->
-
-
+     
+   
 
     <!-- Jumbotron -->
     <section id="home">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text">
-          
+          <button onclick="change()" class="btnn" style="margin-left: 530px;">Edit your Profile</button>
           <h2 class="display-4">about & contact</h2>
-          <h1 class="h1">Hi, I’m <span class="span typed-text"></span><span class="span">Farah</span></h1>
-          <h3 class="lead">Healthcare management engineer at Cairo Univeristy</h3>
+          <h1 class="h1">Hi, I’m <span class="span typed-text"></span><span class="span" id="output"></span></h1>
+          
+        
+          <h3 class="lead" id="output1"></h3>
           <!-- Sosial Media -->
               <div class="sosial-media">
                 <!-- Instagram -->
@@ -117,7 +119,7 @@
           <div class="col-lg-6 col-md-12 justify-content-center d-flex align-items-center">
             <div class="text-capitalize text-about">
               <h1>About <span>Me</span></h1>
-              <p>I’m Farah Ossama Zayn a senior 2 engineer graduated from Al Bashaer International School. My mager is healthcare management systems which is a new mager </p>
+              <p id="output2"> </p>
             </div>
           </div> 
           <div class="col-lg-6 col-md-12 justify-content-center d-flex align-items-center">
@@ -253,6 +255,27 @@
         }
       });
     </script>   
+
+   <script>
+    var myName = "Farah";
+    var myInfo = "Healthcare management engineer at Cairo Univeristy";
+    var myAbout = "I’m Farah Ossama Zayn a senior 2 engineer graduated from Al Bashaer International School. My mager is healthcare management systems which is a new mager";
+    function change(){
+      myName = prompt("Enter your name");
+      myInfo = prompt("Enter your info");
+      myAbout = prompt("About Yourself");
+      document.getElementById('output').innerHTML = myName;
+      document.getElementById('output1').innerHTML = myInfo;
+      document.getElementById('output2').innerHTML = myAbout;
+    }
+    document.getElementById('output').innerHTML = myName;
+    document.getElementById('output1').innerHTML = myInfo;
+    document.getElementById('output2').innerHTML = myAbout;
+  
+   </script>
+
+
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

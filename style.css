@@ -54,6 +54,14 @@
 	text-transform: uppercase;
 	color: black;
 }
+.btnn{
+	font-size: 15px;
+	background-color: black;
+	border-radius: 50px;
+	color: var(--white);
+	text-transform: uppercase;
+	padding: 13px 19px;
+}
 .d-flex .btn{
 	font-size: 15px;
 	background-color: black;
