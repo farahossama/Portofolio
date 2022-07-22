@@ -54,8 +54,19 @@
 	text-transform: uppercase;
 	color: black;
 }
+.btnnn{
+	font-size: 15px;
+	border-color: var(--purple);
+	background-color: var(--purple);
+	border-radius: 50px;
+	color: var(--white);
+	text-transform: uppercase;
+	margin-left: 340px;
+	padding: 8px 10px;
+}
 .btnn{
 	font-size: 15px;
+	border-color: black;
 	background-color: black;
 	border-radius: 50px;
 	color: var(--white);

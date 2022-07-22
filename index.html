@@ -84,7 +84,7 @@
     <section id="home">
       <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid text">
-          <button onclick="change()" class="btnn" style="margin-left: 530px;">Edit your Profile</button>
+          <button onclick="change()" class="btnn" style="margin-left: 530px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit your Profile</button>
           <h2 class="display-4">about & contact</h2>
           <h1 class="h1">Hi, I’m <span class="span typed-text"></span><span class="span" id="output"></span></h1>
           
@@ -107,7 +107,33 @@
       </div>
     </section>
 
-   
+   <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Your Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" METHOD="GET">
+       
+          <label for="fname">First name: </label>
+          <INPUT TYPE="text" NAME="firstname" VALUE="Farah" style="color: grey;"><br>
+          <label for="fname">My Bio: </label>
+          <INPUT TYPE="text" NAME="yourinfo" VALUE="Healthcare management engineer at Cairo Univeristy" style="color: grey;"  onclick="this.style.width = ((this.value.length + 1) * 8) + 'px';"><br>
+          
+          <label for="fname">About Me: </label>
+          <INPUT TYPE="text" NAME="aboutme" VALUE="I’m Farah Ossama Zayn a senior 2 engineer graduated from Al Bashaer International School. My mager is healthcare management systems which is a new mager" style="color: grey;" onclick="this.style.width = ((this.value.length + 1) * 8) + 'px';"><br>
+            <INPUT TYPE="button" NAME="button" Value="Save Changes" onClick="testResults(this.form)" class="btnnn btn-secondary" data-bs-dismiss="modal"> 
+            <!-- <input type="submit" value="Submit"> -->
+        </form> 
+      
+    
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <!-- A Jumbotron -->
@@ -256,25 +282,25 @@
       });
     </script>   
 
-   <script>
-    var myName = "Farah";
-    var myInfo = "Healthcare management engineer at Cairo Univeristy";
-    var myAbout = "I’m Farah Ossama Zayn a senior 2 engineer graduated from Al Bashaer International School. My mager is healthcare management systems which is a new mager";
-    function change(){
-      myName = prompt("Enter your name");
-      myInfo = prompt("Enter your info");
-      myAbout = prompt("About Yourself");
-      document.getElementById('output').innerHTML = myName;
-      document.getElementById('output1').innerHTML = myInfo;
-      document.getElementById('output2').innerHTML = myAbout;
-    }
-    document.getElementById('output').innerHTML = myName;
+ 
+
+  <script>
+  var fname = "Farah";
+  var myInfo = "Healthcare management engineer at Cairo Univeristy";
+  var myAbout = "I’m Farah Ossama Zayn a senior 2 engineer graduated from Al Bashaer International School. My mager is healthcare management systems which is a new mager";
+  function testResults(form){
+    fname = form.firstname.value;
+    myInfo = form.yourinfo.value;
+    myAbout = form.aboutme.value;
+    document.getElementById('output').innerHTML = fname;
     document.getElementById('output1').innerHTML = myInfo;
     document.getElementById('output2').innerHTML = myAbout;
-  
-   </script>
+  }
+  document.getElementById('output').innerHTML = fname;
+  document.getElementById('output1').innerHTML = myInfo;
+  document.getElementById('output2').innerHTML = myAbout;
 
-
+ </script>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
